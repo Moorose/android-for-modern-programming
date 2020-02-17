@@ -6,4 +6,5 @@
     <string name="editText_main">Enter Your Message Here</string>
     <string name="btn_second">REPLY</string>
     <string name="text_header_reply">Reply Received</string>
+    <string name="count_but_text">++</string>
 </resources>

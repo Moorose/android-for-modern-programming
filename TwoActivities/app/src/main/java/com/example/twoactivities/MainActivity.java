@@ -11,12 +11,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    public static final int TEXT_REQUEST = 1;
-    public static final String EXTRA_MESSAGE = "com.example.twoactivities.extra.MESSAGE";
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
+    public static final int TEXT_REQUEST = 1;
+    public static final String REPLY_TEXT = "reply_text";
+    public static final String REPLY_VISIBLE = "reply_visible";
+    public static final String COUNT_VALUE = "count_value";
+    public static final String EXTRA_MESSAGE = "com.example.twoactivities.extra.MESSAGE";
+
+    private TextView countTextView;
     private EditText mMessageEditText;
     private TextView mReplyHeadTextView;
     private TextView mReplyTextView;
+
+    private int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,16 +37,19 @@ public class MainActivity extends AppCompatActivity {
         mMessageEditText = findViewById(R.id.editText_main);
         mReplyHeadTextView = findViewById(R.id.text_header_reply);
         mReplyTextView = findViewById(R.id.text_message_reply);
-
+        countTextView = findViewById(R.id.count_view);
         // Restore the saved state.
         // See onSaveInstanceState() for what gets saved.
         if (savedInstanceState != null) {
-            boolean isVisible = savedInstanceState.getBoolean("reply_visible");
+            count= savedInstanceState.getInt(COUNT_VALUE);
+            countTextView.setText(Integer.toString(count));
+            boolean isVisible = savedInstanceState.getBoolean(REPLY_VISIBLE );
+
             // Show both the header and the message views. If isVisible is
             // false or missing from the bundle, use the default layout.
             if (isVisible) {
                 mReplyHeadTextView.setVisibility(View.VISIBLE);
-                mReplyTextView.setText(savedInstanceState.getString("reply_text"));
+                mReplyTextView.setText(savedInstanceState.getString(REPLY_TEXT));
                 mReplyTextView.setVisibility(View.VISIBLE);
             }
         }
@@ -56,9 +66,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+            outState.putInt(COUNT_VALUE, count);
         if (mReplyHeadTextView.getVisibility() == View.VISIBLE) {
-            outState.putBoolean("reply_visible", true);
-            outState.putString("reply_text", mReplyTextView.getText().toString());
+            outState.putBoolean(REPLY_VISIBLE , true);
+            outState.putString(REPLY_TEXT, mReplyTextView.getText().toString());
         }
     }
 
@@ -72,6 +83,13 @@ public class MainActivity extends AppCompatActivity {
                 mReplyTextView.setText(reply);
                 mReplyTextView.setVisibility(View.VISIBLE);
             }
+        }
+    }
+
+    public void incrementCount(View view) {
+        count++;
+        if (countTextView != null){
+            countTextView.setText(Integer.toString(count));
         }
     }
 
