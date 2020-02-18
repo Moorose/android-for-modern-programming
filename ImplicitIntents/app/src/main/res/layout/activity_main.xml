@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <EditText
@@ -17,52 +18,51 @@
         android:id="@+id/open_website_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="openLink"
         android:layout_marginBottom="24dp"
+        android:onClick="openLink"
         android:text="@string/button_uri" />
 
     <EditText
         android:id="@+id/location_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Name" />
+        android:text="@string/edittext_loc" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/open_location_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:onClick="openLocation"
-        android:text="Open location" />
+        android:text="@string/button_loc" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/share_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:text="@string/edittext_share" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/share_text_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:onClick="shareText"
-        android:text="Share Text" />
+        android:text="@string/button_share" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/camera_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Open Camera"
-        android:textAlignment="center"
+        android:text="@string/text_open_camera"
         android:textSize="24sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/open_camera_btn"
+        android:id="@+id/open_camera_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="openCamera"
-        android:text="Camera" />
+        android:text="@string/button_camera" />
 
 </LinearLayout>

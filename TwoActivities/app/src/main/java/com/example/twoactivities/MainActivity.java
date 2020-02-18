@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String REPLY_TEXT = "reply_text";
     public static final String REPLY_VISIBLE = "reply_visible";
     public static final String COUNT_VALUE = "count_value";
+    public static final String UPPER_CASE = "upper_case";
     public static final String EXTRA_MESSAGE = "com.example.twoactivities.extra.MESSAGE";
 
     private TextView countTextView;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mReplyTextView;
 
     private int count = 0;
+    private boolean upperCase = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +43,10 @@ public class MainActivity extends AppCompatActivity {
         // Restore the saved state.
         // See onSaveInstanceState() for what gets saved.
         if (savedInstanceState != null) {
-            count= savedInstanceState.getInt(COUNT_VALUE);
+            count = savedInstanceState.getInt(COUNT_VALUE);
+            upperCase = savedInstanceState.getBoolean(UPPER_CASE);
             countTextView.setText(Integer.toString(count));
-            boolean isVisible = savedInstanceState.getBoolean(REPLY_VISIBLE );
+            boolean isVisible = savedInstanceState.getBoolean(REPLY_VISIBLE);
 
             // Show both the header and the message views. If isVisible is
             // false or missing from the bundle, use the default layout.
@@ -59,6 +62,13 @@ public class MainActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "Button clicked!");
         Intent intent = new Intent(this, SecondActivity.class);
         String message = mMessageEditText.getText().toString();
+
+        if (upperCase) {
+            message = message.toUpperCase();
+        } else {
+            message = message.toLowerCase();
+        }
+
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivityForResult(intent, TEXT_REQUEST);
     }
@@ -66,9 +76,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-            outState.putInt(COUNT_VALUE, count);
+        outState.putInt(COUNT_VALUE, count);
+        outState.putBoolean(UPPER_CASE, upperCase);
         if (mReplyHeadTextView.getVisibility() == View.VISIBLE) {
-            outState.putBoolean(REPLY_VISIBLE , true);
+            outState.putBoolean(REPLY_VISIBLE, true);
             outState.putString(REPLY_TEXT, mReplyTextView.getText().toString());
         }
     }
@@ -88,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void incrementCount(View view) {
         count++;
-        if (countTextView != null){
+        if (countTextView != null) {
             countTextView.setText(Integer.toString(count));
         }
     }
@@ -127,5 +138,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         Log.d(LOG_TAG, "onRestart");
+    }
+
+    public void changeCase(View view) {
+        upperCase = !upperCase;
+        Log.d(LOG_TAG, "upperCase=" + upperCase);
     }
 }

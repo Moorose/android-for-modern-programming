@@ -8,4 +8,6 @@
 
     <string name="edittext_share">\'Twas brillig and the slithy toves</string>
     <string name="button_share">Share This Text</string>
+    <string name="button_camera">Camera</string>
+    <string name="text_open_camera">Open Camera</string>
 </resources>
