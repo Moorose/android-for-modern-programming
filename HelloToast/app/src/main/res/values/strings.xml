@@ -5,4 +5,5 @@
     <string name="count_initial_value">0</string>
     <string name="toast_message">Hello Toast!</string>
     <string name="button_label_zero">zero</string>
+    <string name="color_btn_text">Color</string>
 </resources>
