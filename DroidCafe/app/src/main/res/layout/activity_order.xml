@@ -10,10 +10,33 @@
         android:id="@+id/order_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Order list"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.164"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/margin_height"
+        android:text="@string/order_list_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_height"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:text="@string/name_label_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_textview" />
+
+    <EditText
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:ems="10"
+        android:hint="@string/name_text_name"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/name_label"
+        app:layout_constraintStart_toEndOf="@+id/name_label" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,4 +7,7 @@
     <string name="donut_order_message">You ordered a donut.</string>
     <string name="ice_cream_order_message">You ordered an ice cream sandwich.</string>
     <string name="froyo_order_message">You ordered a FroYo.</string>
+    <string name="name_label_text">Name</string>
+    <string name="name_text_name">Enter your name</string>
+    <string name="order_list_text">Order list</string>
 </resources>
