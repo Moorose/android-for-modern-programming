@@ -56,8 +56,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_edit_text"
         android:layout_marginLeft="@dimen/margin_edit_text"
-        android:hint="@string/enter_address_hint"
         android:ems="10"
+        android:hint="@string/enter_address_hint"
         android:inputType="textMultiLine"
         app:layout_constraintBaseline_toBaselineOf="@+id/address_label"
         app:layout_constraintStart_toEndOf="@+id/address_label" />
@@ -75,15 +75,27 @@
 
     <EditText
         android:id="@+id/phone_text"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_edit_text"
-        android:layout_marginLeft="@dimen/margin_edit_text"
-        android:hint="@string/enter_phone_hint"
+        android:layout_marginEnd="16dp"
         android:ems="10"
+        android:hint="@string/enter_phone_hint"
         android:inputType="phone"
         app:layout_constraintBaseline_toBaselineOf="@+id/phone_label"
+        app:layout_constraintEnd_toStartOf="@+id/label_spinner"
         app:layout_constraintStart_toEndOf="@+id/phone_label" />
+
+    <Spinner
+        android:id="@+id/label_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_edit_text"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/margin_wide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phone_text"
+        app:layout_constraintTop_toBottomOf="@+id/address_text" />
 
     <TextView
         android:id="@+id/note_label"
@@ -102,8 +114,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_edit_text"
         android:layout_marginLeft="@dimen/margin_edit_text"
-        android:hint="@string/enter_note_hint"
         android:ems="10"
+        android:hint="@string/enter_note_hint"
         android:inputType="textCapSentences|textMultiLine"
         app:layout_constraintBaseline_toBaselineOf="@+id/note_label"
         app:layout_constraintStart_toEndOf="@+id/note_label" />
@@ -131,6 +143,7 @@
             android:id="@+id/sameday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:onClick="onRadioButtonClick"
             android:text="@string/same_day_messenger_service" />
 
@@ -138,6 +151,7 @@
             android:id="@+id/nextday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:onClick="onRadioButtonClick"
             android:text="@string/next_day_ground_delivery" />
 
