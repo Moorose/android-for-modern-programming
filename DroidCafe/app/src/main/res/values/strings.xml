@@ -10,4 +10,14 @@
     <string name="name_label_text">Name</string>
     <string name="name_text_name">Enter your name</string>
     <string name="order_list_text">Order list</string>
+    <string name="address_label_text">Address</string>
+    <string name="enter_address_hint">Enter address</string>
+    <string name="phone_label_text">Phone</string>
+    <string name="enter_phone_hint">Enter phone</string>
+    <string name="note_label_text">Note</string>
+    <string name="enter_note_hint">Enter Note</string>
+    <string name="delivery_method_text">Choose a delivery method</string>
+    <string name="pick_up">Pick up</string>
+    <string name="next_day_ground_delivery">Next day ground delivery</string>
+    <string name="same_day_messenger_service">Same day messenger service</string>
 </resources>

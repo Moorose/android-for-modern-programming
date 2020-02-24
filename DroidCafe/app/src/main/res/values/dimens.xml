@@ -2,4 +2,5 @@
 <resources>
     <dimen name="margin_wide">24dp</dimen>
     <dimen name="margin_height">32dp</dimen>
+    <dimen name="margin_edit_text">8dp</dimen>
 </resources>
