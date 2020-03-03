@@ -38,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        if (mOrderMessage == null){
+            displayToast("Choose item");
+            return;
+        }
         Intent intent = new Intent(MainActivity.this, OrderActivity.class);
         intent.putExtra(EXTRA_MESSAGE, mOrderMessage);
         startActivity(intent);

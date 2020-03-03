@@ -1,5 +1,6 @@
 package com.example.droidcafe;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -29,6 +30,7 @@ public class CheckBoxActivity extends AppCompatActivity {
 //        checkBoxArray.add((CheckBox) findViewById(R.id.carrier_pigeon_checkbox));
     }
 
+
     public void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
@@ -36,13 +38,17 @@ public class CheckBoxActivity extends AppCompatActivity {
 
     public void checkedCheckBox(View view) {
         CheckBox checkBox = (CheckBox) view;
-        if(checkBox.isChecked()) {
+        if (checkBox.isChecked()) {
             checkBoxArray.add(checkBox);
         } else checkBoxArray.remove(checkBox);
     }
 
     public void showCheckBoxes(View view) {
-        String message = (String) checkBoxArray.stream().map(TextView::getText).reduce((s1, s2) -> s1 +","+ s2).orElse("");
-        displayToast(message);
+        String message = (String) checkBoxArray.stream()
+                .map(TextView::getText)
+                .reduce((s1, s2) -> s1 + "," + s2)
+                .orElse("");
+        if (!message.isEmpty())
+            displayToast(message);
     }
 }
