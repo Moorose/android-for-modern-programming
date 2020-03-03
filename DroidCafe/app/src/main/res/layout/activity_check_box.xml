@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".CheckBoxActivity">
+
+    <TextView
+        android:id="@+id/choose_notification_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_edit_text"
+        android:layout_weight="1"
+        android:onClick="checkedCheckBox"
+        android:text="@string/choose_notification_options"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/push_notofications_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_edit_text"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_weight="1"
+        android:onClick="checkedCheckBox"
+        android:text="@string/push_notofications_text"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/sms_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_edit_text"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_weight="1"
+        android:onClick="checkedCheckBox"
+        android:text="@string/sms_text"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/mail_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_edit_text"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_weight="1"
+        android:onClick="checkedCheckBox"
+        android:text="@string/mail_text"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/phone_call_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_edit_text"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_weight="1"
+        android:onClick="checkedCheckBox"
+        android:text="@string/phone_call_text"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/carrier_pigeon_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_edit_text"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_weight="1"
+        android:onClick="checkedCheckBox"
+        android:text="@string/carrier_pigeon_text"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/show_options_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_weight="1"
+        android:onClick="showCheckBoxes"
+        android:text="@string/show_options_text"
+        android:textAlignment="center" />
+</LinearLayout>

@@ -20,6 +20,13 @@
     <string name="pick_up">Pick up</string>
     <string name="next_day_ground_delivery">Next day ground delivery</string>
     <string name="same_day_messenger_service">Same day messenger service</string>
+    <string name="choose_notification_options">Choose notification options</string>
+    <string name="push_notofications_text">Push notofications</string>
+    <string name="sms_text">SMS</string>
+    <string name="mail_text">Mail</string>
+    <string name="phone_call_text">Phone call</string>
+    <string name="carrier_pigeon_text">Carrier pigeon</string>
+    <string name="show_options_text">Show options</string>
     <string-array name="labels_array">
         <item>Home</item>
         <item>Work</item>
