@@ -27,21 +27,9 @@ import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
-    // Tag for the intent extra.
-    public static final String EXTRA_MESSAGE =
-            "com.example.android.droidcafeinput.extra.MESSAGE";
-
-    // The order message, displayed in the Toast and sent to the new Activity.
+    public static final String EXTRA_MESSAGE = "com.example.android.droidcafeinput.extra.MESSAGE";
     private String mOrderMessage;
 
-    /**
-     * Creates the content view, the toolbar, and the floating action button.
-     * <p>
-     * This method is provided in the Basic Activity template.
-     *
-     * @param savedInstanceState Saved instance state bundle.
-     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,41 +38,33 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
-                intent.putExtra(EXTRA_MESSAGE, mOrderMessage);
-                startActivity(intent);
+        fab.setOnClickListener(view -> {
+            if (mOrderMessage == null || mOrderMessage.isEmpty()){
+                displayToast(getString(R.string.choose_dessert));
+                return;
             }
+            Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+            intent.putExtra(EXTRA_MESSAGE, mOrderMessage);
+            startActivity(intent);
         });
     }
 
-    /**
-     * Inflates the menu, and adds items to the action bar if it is present.
-     *
-     * @param menu Menu to inflate.
-     * @return Returns true if the menu inflated.
-     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
-    /**
-     * Handles app bar item clicks.
-     *
-     * @param item Item clicked.
-     * @return True if one of the defined items was clicked.
-     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent = null;
 
         switch (item.getItemId()) {
             case R.id.action_order:
+                if (mOrderMessage == null || mOrderMessage.isEmpty()){
+                    displayToast(getString(R.string.choose_dessert));
+                    return true;
+                }
                 intent = new Intent(MainActivity.this, OrderActivity.class);
                 intent.putExtra(EXTRA_MESSAGE, mOrderMessage);
                 startActivity(intent);
@@ -97,49 +77,33 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(MainActivity.this, FavoritesActivity.class);
                 startActivity(intent);
                 return true;
-            case R.id.action_contact:
-                intent = new Intent(MainActivity.this, ContactActivity.class);
+            case R.id.action_recipes:
+                intent = new Intent(MainActivity.this, RecipesActivity.class);
                 startActivity(intent);
                 return true;
             default:
-                // Do nothing
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * Displays a Toast with the message.
-     *
-     * @param message Message to display.
-     */
     public void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
     }
 
-    /**
-     * Shows a message that the donut image was clicked.
-     */
     public void showDonutOrder(View view) {
         mOrderMessage = getString(R.string.donut_order_message);
         displayToast(mOrderMessage);
     }
 
-    /**
-     * Shows a message that the ice cream sandwich image was clicked.
-     */
     public void showIceCreamOrder(View view) {
         mOrderMessage = getString(R.string.ice_cream_order_message);
         displayToast(mOrderMessage);
     }
 
-    /**
-     * Shows a message that the froyo image was clicked.
-     */
     public void showFroyoOrder(View view) {
         mOrderMessage = getString(R.string.froyo_order_message);
         displayToast(mOrderMessage);
     }
-
 }

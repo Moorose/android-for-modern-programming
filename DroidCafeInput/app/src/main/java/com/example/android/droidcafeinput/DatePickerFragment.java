@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +36,14 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
 
     @Override
     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-        StatusActivity activity = (StatusActivity) getActivity();
-        activity.processDatePickerResult(year, month, day);
+        FragmentActivity activity = getActivity();
+
+        if (activity instanceof StatusActivity) {
+            StatusActivity statusActivity = (StatusActivity) activity;
+            statusActivity.processDatePickerResult(year, month, day);
+        }else if(activity instanceof OrderActivity) {
+            OrderActivity orderActivity = (OrderActivity) activity;
+            orderActivity.processDatePickerResult(year, month, day);
+        }
     }
 }

@@ -41,7 +41,7 @@
         service</string>
     <string name="next_day_ground_delivery">Next day ground delivery</string>
     <string name="pick_up">Pick up</string>
-    <string name="action_contact">Contact</string>
+    <string name="action_recipes">Recipes</string>
     <string name="action_order">Order</string>
     <string name="action_status">Status</string>
     <string name="action_favorites">Favorites</string>
@@ -72,9 +72,15 @@
     <string name="alert_cancel">CANCEL</string>
     <string name="btn_date_text">DATE</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="datepicker">datePicker</string>
     <string name="date_text">Date:</string>
+    <string name="choose_delivery_date">Choose delivery date</string>
+    <string name="choose_dessert">Choose the dessert you would like</string>
+    <string name="title_activity_order">Step 1</string>
+    <string name="title_activity_checkbox">Step 2</string>
+    <string name="title_activity_recipes">RecipesActivity</string>
+    <string name="title_activity_favorite">FavoritesActivity</string>
+    <string name="title_activity_status">StatusActivity</string>
 
 </resources>
