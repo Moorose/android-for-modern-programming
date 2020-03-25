@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="header_recipes_array">
+        <item>Dessert Crepes</item>
+        <item>Battenburg Cake</item>
+        <item>Oreo Truffles</item>
+        <item>Chocolate Covered Oreos</item>
+        <item>Cookie Dough Ice Cream Sandwiches</item>
+        <item>Neapolitan Bundt Cake</item>
+        <item>Chocolate-Covered Cake Balls</item>
+    </string-array>
+    <string-array name="short_content_recipes_array">
+        <item>Essential crepe recipe. Sprinkle warm crepes with sugar and lemon, or serve with cream or ice cream and fruit.</item>
+        <item>This fancy almond-flavored tea cake, also called \'Battenberg\/Battenburg Cake\' or \'Battenberg\/Battenburg Square\' features a homemade marzipan.</item>
+        <item>Oreos, cream cheese, and white chocolate chips are a match made in dessert heaven.</item>
+        <item>Is there anything better?</item>
+        <item>This will RUIN you for all other ice cream sandwiches.</item>
+        <item>3 flavors in 1.</item>
+        <item>Use your favorite kind of cake!</item>
+    </string-array>
+    <string-array name="content_recipes_array">
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet dolore fugit magnam mollitia perspiciatis quisquam repellat tenetur ullam. Accusamus animi aperiam autem cupiditate deserunt ducimus, itaque neque repellendus voluptate!</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet dolore fugit magnam mollitia perspiciatis quisquam repellat tenetur ullam. Accusamus animi aperiam autem cupiditate deserunt ducimus, itaque neque repellendus voluptate!</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet dolore fugit magnam mollitia perspiciatis quisquam repellat tenetur ullam. Accusamus animi aperiam autem cupiditate deserunt ducimus, itaque neque repellendus voluptate!</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet dolore fugit magnam mollitia perspiciatis quisquam repellat tenetur ullam. Accusamus animi aperiam autem cupiditate deserunt ducimus, itaque neque repellendus voluptate!</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet dolore fugit magnam mollitia perspiciatis quisquam repellat tenetur ullam. Accusamus animi aperiam autem cupiditate deserunt ducimus, itaque neque repellendus voluptate!</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet dolore fugit magnam mollitia perspiciatis quisquam repellat tenetur ullam. Accusamus animi aperiam autem cupiditate deserunt ducimus, itaque neque repellendus voluptate!</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet dolore fugit magnam mollitia perspiciatis quisquam repellat tenetur ullam. Accusamus animi aperiam autem cupiditate deserunt ducimus, itaque neque repellendus voluptate!</item>
+    </string-array>
+    <string-array name="img_recipes_array">
+        <item>dessert_crepes</item>
+        <item>cake_balls</item>
+        <item>battenburg_cake</item>
+        <item>chocolate_covered_oreos</item>
+        <item>delish_oreo_truffles</item>
+        <item>ice_cream_sandwiches</item>
+        <item>cake_balls</item>
+    </string-array>
+</resources>
