@@ -1,53 +1,203 @@
-DroidCafeInput - Solution Code
-==============================
+# СОВРЕМЕННОЕ ПРОГРАММИРОВАНИЕ
+                     
+#Лабораторная работа №3
+#«Взаимодействие с пользователем»
 
-App that demonstrates images used as buttons and a floating action button
-to launch a second activity, which demonstrates EditText input controls,
-radio buttons, and a spinner.
+1.	Разработано приложение DroidCafe: 
 
-Introduction
-------------
+![](.README_images/401369d7.png)
 
-This app created from the Basic Activity template lets a user tap an image
-to make a choice. The app displays a Toast message showing the user’s choice.
-The app also uses an intent so that when the user taps the floating
-action button, it launches the second Activity. The second Activity
-demonstrates EditText input controls, radio buttons, and a spinner
-for entering the label for a phone number.
+Рисунок 1 – Отображение дизайна при горизонтальной ориентации экрана
 
-Pre-requisites
---------------
+![](.README_images/fe708d5a.png)
 
-You need to know:
-- How to open, build, and run apps with Android Studio.
-- Handling a Button click.
-- Editing an XML layout file.
-- Displaying a Toast message.
+Рисунок 2 – Отображение дизайна при вертикальной ориентации экрана
 
-Getting Started
----------------
+![](.README_images/4d64c3c9.png)
 
-1. Download the code.
-2. Open the code in Android Studio.
-3. Run the app.
+Рисунок 3 – Отображение на устройстве с горизонтальной ориентацией экрана
+
+![](.README_images/a2dcb3f1.png)
+
+Рисунок 4 – Отображение на устройстве с вертикальной ориентацией экрана
+
+2.	Создайте приложение с 5 checkboxes и кнопкой «Show Toast»:
+
+![](.README_images/94124ea8.png)
+Рисунок  – Отображение на устройстве с вертикальной ориентацией экрана
+
+![](.README_images/c9cf9817.png)
+
+Рисунок  – Активность с чекбоксами
+
+![](.README_images/896b443f.png)
+
+Рисунок  – демонстрация активности с одним чекбоксом
+
+![](.README_images/b1982c50.png)
+
+Рисунок  – демонстрация активности с несколькими чекбоксами
+
+3.	Доработайте приложение DroidCafeOptions: добавьте кнопку «Дата» под вариантами доставки, которая показывает выбор даты; добавьте выбранную пользователем дату во всплывающем сообщении
+
+![](.README_images/5d603be4.png)![](.README_images/348c8c51.png)![](.README_images/b04c3793.png)
+
+Рисунок  – демонстрация работы с датой
+
+4	Создайте приложение с главной «Activity»  и, по крайней мере, тремя другими дочерними «Activity». Каждое «Activity» должно иметь меню параметров и использовать панель инструментов:
+![](.README_images/fbcc5cd3.png)
+![](.README_images/84ba0533.png)
+![](.README_images/5785d8e7.png)
+![](.README_images/6881e789.png)
+
+![](.README_images/af799f91.png)
+![](.README_images/aaf35cc8.png)
+![](.README_images/94cd9d18.png)
+![](.README_images/41687847.png)
+
+5.	Создайте приложение, которое использует RecyclerView для отображения списка рецептов. Каждый элемент списка должен содержать название рецепта с кратким описанием. Когда пользователь нажимает на рецепт (элемент в списке), запускается «Activity», которая показывает полный текст рецепта.
+
+![](.README_images/94cd9d18.png)
+![](.README_images/41687847.png)
+
+6.	Используйте отдельные элементы TextView и стили для названия и описания рецепта. Вы можете использовать заполнитель текста для полных рецептов. Как вариант, добавьте изображение готового блюда к каждому рецепту. При нажатии кнопки «Вверх» пользователь возвращается к списку рецептов.
+
+Листинг recipe_item.xml
+
+```dtd
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <TextView
+        android:id="@+id/recipe_item_header"
+        style="@style/recipe_item_header_styles" />
+    <TextView
+        android:id="@+id/recipe_item_content"
+        style="@style/recipe_item_content_styles" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark" />
+</LinearLayout>
+```
+Листинг styles.xml
+
+```dtd
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay"
+           parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay"
+           parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="recipe_item_header_styles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="recipe_item_content_styles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>
+```
+
+Листинг AndroidManifest.xml
+
+```dtd
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.droidcafeinput">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+        // НАСТРОЙКА НАВИГАЦИИ КНОПКИ «ВВЕРХ» ДЛЯ РЕЦЕПТОВ
+            android:name=".RecipeItemActivity"  
+            android:label="@string/title_activity_recipes"
+            android:parentActivityName=".RecipesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".RecipesActivity"
+            android:label="@string/title_activity_recipes"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".FavoritesActivity"
+            android:label="@string/title_activity_favorite"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".StatusActivity"
+            android:label="@string/title_activity_status"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".CheckBoxActivity"
+            android:label="@string/title_activity_checkbox"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".OrderActivity"
+            android:label="@string/title_activity_order"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
+```
 
 
-License
--------
-
-Copyright 2018 Google, Inc.
-
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
