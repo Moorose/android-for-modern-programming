@@ -14,10 +14,24 @@
   limitations under the License.
   -->
 <resources>
-    <string name="app_name">Material Me!</string>
+    <array name="sports_images">
+        <item>@drawable/img_baseball</item>
+        <item>@drawable/img_badminton</item>
+        <item>@drawable/img_basketball</item>
+        <item>@drawable/img_bowling</item>
+        <item>@drawable/img_cycling</item>
+        <item>@drawable/img_golf</item>
+        <item>@drawable/img_running</item>
+        <item>@drawable/img_soccer</item>
+        <item>@drawable/img_swimming</item>
+        <item>@drawable/img_tabletennis</item>
+        <item>@drawable/img_tennis</item>
+    </array>
     <string name="title_placeholder">Title</string>
     <string name="news_placeholder">News</string>
     <string name="sports_info_placeholder">Here is some news</string>
+
+    <string name="app_name">Material Me!</string>
 
     <string-array name="sports_titles">
         <item>Baseball</item>
@@ -47,4 +61,6 @@
         <item>Here is some Tennis news!</item>
     </string-array>
 
+
+    <string name="lorem_long">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, illo, quae. Ad animi mollitia repellendus repudiandae soluta. A accusamus adipisci assumenda consequuntur, delectus dicta, fuga, numquam quidem quod rerum voluptates!</string>
 </resources>
