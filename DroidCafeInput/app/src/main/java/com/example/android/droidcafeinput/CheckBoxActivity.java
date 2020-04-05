@@ -20,12 +20,6 @@ public class CheckBoxActivity extends AppCompatActivity {
         setContentView(R.layout.activity_check_box);
 
         checkBoxArray = new ArrayList<CheckBox>();
-
-//        checkBoxArray.add((CheckBox) findViewById(R.id.push_notofications_checkbox));
-//        checkBoxArray.add((CheckBox) findViewById(R.id.sms_checkbox));
-//        checkBoxArray.add((CheckBox) findViewById(R.id.mail_checkbox));
-//        checkBoxArray.add((CheckBox) findViewById(R.id.phone_call_checkbox));
-//        checkBoxArray.add((CheckBox) findViewById(R.id.carrier_pigeon_checkbox));
     }
 
 
@@ -38,7 +32,9 @@ public class CheckBoxActivity extends AppCompatActivity {
         CheckBox checkBox = (CheckBox) view;
         if (checkBox.isChecked()) {
             checkBoxArray.add(checkBox);
-        } else checkBoxArray.remove(checkBox);
+        } else {
+            checkBoxArray.remove(checkBox);
+        }
     }
 
     public void showCheckBoxes(View view) {

@@ -2,10 +2,8 @@ package com.example.android.droidcafeinput;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Debug;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,7 +45,6 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.Re
         public final TextView recipeHeaderTextView;
         public final TextView recipeContentTextView;
         final RecipeListAdapter mAdapter;
-
 
         public RecipeViewHolder(@NonNull View itemView, RecipeListAdapter adapter) {
             super(itemView);
