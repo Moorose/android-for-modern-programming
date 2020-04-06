@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.decreaseTeam2:
                 mScore2--;
                 textViewScore2.setText(String.valueOf(mScore2));
+                break;
             case R.id.increaseTeam1:
                 mScore1++;
                 textViewScore1.setText(String.valueOf(mScore1));
