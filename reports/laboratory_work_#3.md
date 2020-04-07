@@ -17,39 +17,39 @@
 
 #### 1	Разработать приложение DroidCafe 
 
-![](.README_images/401369d7.png)
+![](.images/401369d7.png)
 
 Рисунок 1 – Отображение дизайна при горизонтальной ориентации экрана
 
-![](.README_images/fe708d5a.png)
+![](.images/fe708d5a.png)
 
 Рисунок 2 – Отображение дизайна при вертикальной ориентации экрана
 
-![](.README_images/4d64c3c9.png)
+![](.images/4d64c3c9.png)
 
 Рисунок 3 – Отображение на устройстве с горизонтальной ориентацией экрана
 
-![](.README_images/a2dcb3f1.png)
+![](.images/a2dcb3f1.png)
 
 Рисунок 4 – Отображение на устройстве с вертикальной ориентацией экрана
 
 #### 2 Создайть приложение с 5 checkboxes и кнопкой «Show Toast»
 
-![](.README_images/94124ea8.png)
+![](.images/94124ea8.png)
 
 Рисунок 5 – Отображение дизайна
 
 На активности представленно несколько чекбоксов с различными параметрами, при выборе чекбокса его описание будет выведено после нажатия кнопки ***SHOW OPTIONS*** вместе со всеми выбранными пунктами.
 
-![](.README_images/c9cf9817.png)
+![](.images/c9cf9817.png)
 
 Рисунок 6 – Активность с чекбоксами
 
-![](.README_images/896b443f.png)
+![](.images/896b443f.png)
 
 Рисунок 7 – демонстрация активности с одним чекбоксом
 
-![](.README_images/b1982c50.png)
+![](.images/b1982c50.png)
 
 Рисунок 8 – демонстрация активности с несколькими чекбоксами
 
@@ -113,7 +113,7 @@ public class CheckBoxActivity extends AppCompatActivity {
 
 Пра нажатии кнопки ***CHOOSE DELIVERY DATE*** появится окно с календарем. После выбора и подтверждения дата будет выведена на экран. 
 
-![](.README_images/5d603be4.png)![](.README_images/348c8c51.png)![](.README_images/b04c3793.png)
+![](.images/5d603be4.png)![](.images/348c8c51.png)![](.images/b04c3793.png)
 
 Рисунок 9 – демонстрация работы с датой
 
@@ -194,26 +194,26 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
 
 Главная «Activity» с контентом позволякт перейти к большей части дочерних «Activity».
 
-![](.README_images/fbcc5cd3.png)
+![](.images/fbcc5cd3.png)
 
-С помощью значка «Activity» ![](.README_images/e849ec5a.png) на верхней панели или *FAB* в нижней части экрана 
+С помощью значка «Activity» ![](.images/e849ec5a.png) на верхней панели или *FAB* в нижней части экрана 
 можно перейти к «Activity» оформления заказа.
 «Activity» оформления заказа позволяет перейти к «Activity» выбора уведомлений.
 Кнопка *Up* позволяе вернуться назад   
 
-![](.README_images/84ba0533.png)
-![](.README_images/5785d8e7.png)
+![](.images/84ba0533.png)
+![](.images/5785d8e7.png)
 
 С помощью верхней панели можно перейти к «StatusActivity», «FavoritesActivity» и «RecipesActivity».
 
-![](.README_images/6881e789.png)
-![](.README_images/aaf35cc8.png)
-![](.README_images/94cd9d18.png)
+![](.images/6881e789.png)
+![](.images/aaf35cc8.png)
+![](.images/94cd9d18.png)
 
 В «RecipesActivity» отображается список рецептов. 
 Каждый элемент списка при нажатии запускается «Activity», которая показывает полный текст рецепта и его изображение.
 
-![](.README_images/41687847.png)
+![](.images/41687847.png)
 
 #### 5	Создать приложение, которое использует RecyclerView для отображения списка рецептов. Каждый элемент списка должен содержать название рецепта с кратким описанием. Когда пользователь нажимает на рецепт (элемент в списке), запускается «Activity», которая показывает полный текст рецепта.
 
@@ -439,8 +439,8 @@ public class RecipeItemActivity extends AppCompatActivity {
 }
 ```
 
-![](.README_images/94cd9d18.png)
-![](.README_images/41687847.png)
+![](.images/94cd9d18.png)
+![](.images/41687847.png)
 
 Для описания рецепта используются отдельные элементы TextView и стили.
 Стили применяются с помощью атрибута `style` в листинге *recipe_item.xml*.

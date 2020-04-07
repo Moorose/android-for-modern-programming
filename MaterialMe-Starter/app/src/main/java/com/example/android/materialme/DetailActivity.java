@@ -20,7 +20,9 @@ public class DetailActivity extends AppCompatActivity {
         ImageView sportsImage = findViewById(R.id.sportsImageDetail);
 
         sportsTitle.setText(getIntent().getStringExtra("title"));
-        Glide.with(this).load(getIntent().getIntExtra("image_resource",0)).into(sportsImage);
+        Glide.with(this)
+                .load(getIntent().getIntExtra("image_resource", 0))
+                .into(sportsImage);
 
         Fade fade = new Fade();
         View decor = getWindow().getDecorView();
@@ -30,6 +32,5 @@ public class DetailActivity extends AppCompatActivity {
 
         getWindow().setEnterTransition(fade);
         getWindow().setExitTransition(fade);
-
     }
 }
