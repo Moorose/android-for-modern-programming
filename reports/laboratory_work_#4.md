@@ -153,6 +153,9 @@ public class MainActivity extends AppCompatActivity {
 
 #### 2  На основе приложения MaterialMe создайть shared element transition между MainActivity и DetailActivity для демонстрации банера.
 
+DEMO: https://flashbackconnect.com/Default.aspx?id=NuiVd2xK-e5EBhq5nHTcuA2
+
+
 ![](.images/033246ab.png)
 ![](.images/b4f7474b.png)
 ![](.images/864650ff.png)
